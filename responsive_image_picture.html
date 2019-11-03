@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <header>
+        <p>Display Density Descriptor Model</p>
+        <img alt="Display Density Descriptor Method" src="jpg/image_400.jpg" width="384"
+            srcset="
+                    jpg/image_400.jpg 1x,
+                    jpg/image_1080.jpg 2x, 
+                    jpg/image_2000.jpg 3x">
+
+        <p>Width Descriptor Model</p>
+            <img alt="Width Descriptor Method" src="jpg/image_400.jpg"
+                sizes="
+                    (max-width: 24em) 100vw,
+                    (min-width: 24em) and (max-width: 64em) 100vw,
+                    (min-width: 64empx) 100vw 
+                    100vw"
+                srcset="
+                        jpg/image_400.jpg 400w,
+                        jpg/image_1080.jpg 1080w, 
+                        jpg/image_2000.jpg 2000w">
+
+        <p>Picture element</p>
+        <picture>
+            <source media="max-width: 400px" srcset="jpg/image_400.jpg">
+            <source media="(min-width: 400px) and (max-width: 1100px)" srcset="jpg/image_1080.jpg">
+            <source media="min-width: 1100px" srcset="jpg/image_2000.jpg">
+            <img src="jpg/image_400.jpg" alt="Picture Element">
+        </picture>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <section class="col-12">
+                
+            </section>
+        </div>
+
+        <section>
+            <h2>Nachrichten</h2>
+            <article>
+                <h3>Überschrift 1</h3>
+                <p>Text</p>
+            </article>
+            <article>
+                <h3>Überschrift 1</h3>
+                <p>Text</p>
+            </article>
+            <article>
+                <h3>Überschrift 1</h3>
+                <p>Text</p>
+            </article>
+        </section>
+        <section>
+            Section
+        </section>
+    </main>
+    <footer class="container">
+        Footer
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
