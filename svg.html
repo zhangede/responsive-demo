@@ -6,44 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <title>Responsive Demo</title>
+    <title>Responsive Design Demo - SVG</title>
 
     <style>
-    
-    .svg-container { 
-        display: inline-block;
-        position: relative;
-        width: 100px;
-        height: 100px;  
-        overflow: hidden;
-    }
 
-    .svg-content { 
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+      .svg-logo {
+        position: relative;
+        overflow: hidden;
+      }
+
+      #svg_16, #svg_32, #svg_64 {
+        visibility: visible;
+        display: none;
+      }
+
+      @media screen and (max-width: 399px) {
+        .svg-logo {
+          width: 16px;
+          height: 16px;
+        }
+
+        #svg_16 {
+          visibility: visible;
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: 400px) {
+        .svg-logo {
+          width: 32px;
+          height: 32px;  
+        }
+
+        #svg_32 {
+          visibility: visible;
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: 1020px) {
+        .svg-logo {
+          width: 64px;
+          height: 64px;  
+        }
+
+        #svg_64 {
+          visibility: visible;
+          display: inline;
+        }
+
+        #Path_2 {
+          visibility: hidden;
+        }
+      }
+
+      @media screen and (min-width: 1400px) {
+        #Path_2 {
+          visibility: visible;
+        }
+      }
+    
+      
     </style>
   </head>
   <body>
 
-    <div class="svg-container">
-        <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="svg-content">
-        <circle fill="#F7941E" stroke="#231F20" stroke-width="10" 
-        stroke-miterlimit="10" cx="250" cy="250" r="200" opacity="0.6" />
-        </svg>
-    </div>
-    <div class="svg-container" width="200%" height="200%">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
-            <rect width="64" height="64" fill="#fff"/>
-            <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,7,6,0,10Z" transform="translate(-209 -205.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
-            <path id="Path_2" data-name="Path 2" d="M89,24h32.2l7.8,5.439V40H95.506" transform="translate(-72)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
-        </svg>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Responsive Design</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Start <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="flexbox_vs_grid.html">Flexbox / Grid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fonts.html">Fonts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="responsive_image_picture.html">Images</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="svg.html">SVG</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+        <div class="svg-logo">
+            <svg id="svg_64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+              <g id="_64px" data-name="64px" clip-path="url(#clip-_64px)">
+                  <rect width="64" height="64" fill="#fff"/>
+                  <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,7,6,0,10Z" transform="translate(-209 -205.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+                  <path id="Path_2" data-name="Path 2" d="M89,24h32.2l7.8,5.439V40H95.506" transform="translate(-72)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+                </g>
+            </svg>
+            <svg id="svg_32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+              <g id="_32px" data-name="32px" clip-path="url(#clip-_32px)">
+                <rect width="32" height="32" fill="#fff"/>
+                <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,8,6.007v9.993Z" transform="translate(-210 -221.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+              </g>
+            </svg>
+            <svg id="svg_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+              <g id="_16px" data-name="16px" clip-path="url(#clip-_16px)">
+                <rect width="16" height="16" fill="#fff"/>
+                <path id="Path_1" data-name="Path 1" d="M218,237.95v-5l4-3,4,3v5Z" transform="translate(-214 -225.95)" fill="#707070" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+              </g>
+            </svg>
+        </div>
+    </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

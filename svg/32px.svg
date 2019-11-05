@@ -1,9 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-  <defs>
-    <clipPath id="clip-_32px">
-      <rect width="32" height="32"/>
-    </clipPath>
-  </defs>
   <g id="_32px" data-name="32px" clip-path="url(#clip-_32px)">
     <rect width="32" height="32" fill="#fff"/>
     <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,8,6.007v9.993Z" transform="translate(-210 -221.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
