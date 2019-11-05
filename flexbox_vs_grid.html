@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        
+        /* Main Container */
+        .main-container {
+            display: grid;
+            grid-template-rows: [top] 1fr [center] 1fr [bottom];
+            grid-template-columns: [start] 3fr [middle] 1fr [end];
+            column-gap: 1em;
+            align-items: start;
+            
+            /* Styling */
+            background-color: #ccc;
+            margin-top: 100px;
+        }
+
+        .main-container section {
+            place-self: start / start;
+            background-color: #ccc;
+        }
+
+        .main-container main {
+            grid-row: top / bottom;
+            grid-column: start / middle;
+        }
+
+        .main-container aside {
+            grid-row:  top / bottom;
+            grid-column:  middle / end;
+        }
+
+
+        /* Footer Container */
+        .footer-container {
+            display: grid;
+            background-color: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer-container {
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas:
+                "footer-logo"
+                "footer-contact"
+                "footer-links";
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            .footer-container {
+                grid-template-rows: 120px 40px;
+                grid-template-columns: 240px auto 25%;
+                grid-template-areas:
+                    "footer-logo footer-contact footer-contact"
+                    "footer-logo footer-links footer-links";
+            }
+        }
+
+        .footer-container section {
+            background-color: #ccc;
+            padding: 12px;
+        }
+
+        .footer-container .footer-logo {
+            grid-area: footer-logo;
+            background: #ddd;
+        }
+
+        .footer-container .footer-contact {
+            grid-area: footer-contact;
+            background: #aaa;
+        }
+
+        .footer-container .footer-links {
+            grid-area: footer-links;
+        }
+
+        /* Box Container */
+        .box_container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box_container article {
+            width:25%;
+            padding: 20px;
+            background-color: #efefef;
+            box-sizing: border-box;
+        }
+
+        .box_container article.hero {
+            order: -1;
+            flex-grow: 5;
+            width: 100%;
+        }
+    
+    </style>
+
+    <title>Responsive Design - Grid example</title>
+  </head>
+  <body>
+    <div class="container main-container">
+        <main>
+            <h2>Nachrichten</h2>
+            <section class="box_container">
+                <article class="doppelt hero">
+                    <h3>Überschrift 1</h3>
+                    <p>Text</p>
+                </article>
+                <article>
+                    <h3>Header 2</h3>
+                    <p>Text</p>
+                </article>
+                <article>
+                    <h3>Überschrift 3</h3>
+                    <p>Text</p>
+                </article>
+                <article>
+                    <h3>Überschrift 4</h3>
+                    <p>Text</p>
+                </article>
+                <article>
+                    <h3>Überschrift 5</h3>
+                    <p>Text</p>
+                </article>
+            </section>
+        </main>
+        <aside>
+            Seitenspalte
+        </aside>
+    </div>
+    <footer class="container footer-container">
+        <section class="footer-logo">
+            Logo
+        </section>
+        <section class="footer-contact">
+            <p>
+                Karl-von-Closen-Gymnasium<br/>
+                Gerner Allee 1<br/>
+                84307 Eggenfelden<br/>
+                <a href="mailto:sekretariat@closen.de">Sekretariat</a>
+            </p>
+        </section>
+        <section class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutzerklärung</a>
+        </section>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
