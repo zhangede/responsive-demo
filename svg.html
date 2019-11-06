@@ -12,7 +12,7 @@
 
     <style>
 
-      .svg-logo {
+      .footer-svg-logo {
         position: relative;
         overflow: hidden;
       }
@@ -23,7 +23,7 @@
       }
 
       @media screen and (max-width: 399px) {
-        .svg-logo {
+        .footer-svg-logo {
           width: 16px;
           height: 16px;
         }
@@ -35,7 +35,7 @@
       }
 
       @media screen and (min-width: 400px) {
-        .svg-logo {
+        .footer-svg-logo {
           width: 32px;
           height: 32px;  
         }
@@ -47,7 +47,7 @@
       }
 
       @media screen and (min-width: 1020px) {
-        .svg-logo {
+        .footer-svg-logo {
           width: 64px;
           height: 64px;  
         }
@@ -57,21 +57,106 @@
           display: inline;
         }
 
-        #Path_2 {
+        .footer-svg-logo #Path_2 {
           visibility: hidden;
         }
       }
 
-      @media screen and (min-width: 1400px) {
-        #Path_2 {
+      @media screen and (min-width: 1200px) {
+        .footer-svg-logo #Path_2 {
           visibility: visible;
         }
       }
     
+    .header-grid {
+      display: grid;
+      grid-template-columns: 16% auto;
+      grid-template-rows: minmax(16px, 64px);
+      grid-template-areas: "logo claim";
+    }
+
+    .header-grid-logo {
+      grid-area: logo;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .header-grid-claim {
+      grid-area: claim;
+      align-self: center;
+    }
+
+    .header-grid #svg_64, .header-grid #svg_16, .header-grid #svg_32 {
+        visibility: hidden;
+        display: none;
+    }
+
+    @media screen and (max-width: 399px) {
+      .header-grid-logo {
+        width: 32px;
+        height: 32px;  
+      }
+
+      .header-grid #svg_16 {
+        visibility: visible;
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: 400px) {
+      .header-grid-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .header-grid #svg_32 {
+        visibility: visible;
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: 1020px) {
+      .header-grid-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .header-grid #svg_64 {
+        visibility: visible;
+        display: inline;
+      }
+    }
       
     </style>
   </head>
   <body>
+
+    <header class="header-grid">
+      <section class="header-grid-logo">
+          <svg id="svg_64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+            <g id="_64px" data-name="64px" clip-path="url(#clip-_64px)">
+                <rect width="64" height="64" fill="#fff"/>
+                <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,7,6,0,10Z" transform="translate(-209 -205.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+                <path id="Path_2" data-name="Path 2" d="M89,24h32.2l7.8,5.439V40H95.506" transform="translate(-72)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+              </g>
+          </svg>
+          <svg id="svg_32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+            <g id="_32px" data-name="32px" clip-path="url(#clip-_32px)">
+              <rect width="32" height="32" fill="#fff"/>
+              <path id="Path_1" data-name="Path 1" d="M218,245.95v-9.993l8-6.007,8,6.007v9.993Z" transform="translate(-210 -221.95)" fill="none" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+            </g>
+          </svg>
+          <svg id="svg_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" preserveAspectRatio="xMin yMin meet">
+            <g id="_16px" data-name="16px" clip-path="url(#clip-_16px)">
+              <rect width="16" height="16" fill="#fff"/>
+              <path id="Path_1" data-name="Path 1" d="M218,237.95v-5l4-3,4,3v5Z" transform="translate(-214 -225.95)" fill="#707070" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+            </g>
+          </svg>
+      </section>
+      <section class="header-grid-claim">
+        Die moderne Schule
+      </section>
+    </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Responsive Design</a>
@@ -101,7 +186,7 @@
     </nav>
 
     <main class="container">
-        <div class="svg-logo">
+        <div class="footer-svg-logo">
             <svg id="svg_64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
               <g id="_64px" data-name="64px" clip-path="url(#clip-_64px)">
                   <rect width="64" height="64" fill="#fff"/>
